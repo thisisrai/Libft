@@ -6,7 +6,7 @@
 #    By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 15:09:51 by ralee             #+#    #+#              #
-#    Updated: 2017/11/27 16:04:12 by ralee            ###   ########.fr        #
+#    Updated: 2017/11/27 18:49:35 by ralee            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ SRC = ./src/
 CHECKER = -Wall -Wextra -Werror
 INCLUDE_PATH = ./include/
 OPTION = -c -I $(INCLUDE_PATH)
-SOURCE = $(SRC)ft_strlen.c
-O_FILES = ft_strlen.o
+SOURCE = $(SRC)ft_strlen.c $(SRC)ft_strdup.c
+O_FILES = ft_strlen.o ft_strdup.o
 
 all: $(NAME)
 
