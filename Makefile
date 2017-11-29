@@ -6,7 +6,7 @@
 #    By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 15:09:51 by ralee             #+#    #+#              #
-#    Updated: 2017/11/28 17:53:33 by ralee            ###   ########.fr        #
+#    Updated: 2017/11/29 10:37:22 by ralee            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,14 @@ O_FILES = ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o ft_strcmp.o ft_atoi.o
 all: $(NAME)
 
 $(NAME):
-	gcc $(CHECKER) $(OPTION) $(SOURCE)
-	ar rc $(NAME) $(O_FILES)
+	@gcc $(CHECKER) $(OPTION) $(SOURCE)
+	@ar rc $(NAME) $(O_FILES)
 
 
 clean:
-	/bin/rm -r $(O_FILES)
+	@/bin/rm -r $(O_FILES)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean $(NAME)

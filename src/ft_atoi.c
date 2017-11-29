@@ -6,16 +6,16 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 14:19:23 by ralee             #+#    #+#             */
-/*   Updated: 2017/11/28 17:50:48 by ralee            ###   ########.fr       */
+/*   Updated: 2017/11/29 10:49:45 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(char *str)
 {
-	int		start;
+	int			start;
 	long long	number;
-	int		positive;
-	int		placeholder;
+	int			positive;
+	int			placeholder;
 
 	start = 0;
 	number = 0;
