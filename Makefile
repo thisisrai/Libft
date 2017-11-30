@@ -6,7 +6,7 @@
 #    By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 15:09:51 by ralee             #+#    #+#              #
-#    Updated: 2017/11/29 10:59:23 by ralee            ###   ########.fr        #
+#    Updated: 2017/11/29 11:35:43 by ralee            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,9 @@ CHECKER = -Wall -Wextra -Werror
 INCLUDE_PATH = ./include/
 OPTION = -c -I $(INCLUDE_PATH)
 SOURCE = $(SRC)ft_strlen.c $(SRC)ft_strdup.c $(SRC)ft_strcpy.c $(SRC)ft_strncpy.c \
-$(SRC)ft_strcmp.c $(SRC)ft_atoi.c $(SRC)ft_isalpha.c $(SRC)ft_isdigit.c $(SRC)ft_isalnum.c
-O_FILES = ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o ft_strcmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o
+$(SRC)ft_strcmp.c $(SRC)ft_atoi.c $(SRC)ft_isalpha.c $(SRC)ft_isdigit.c $(SRC)ft_isalnum.c $(SRC)ft_strstr.c
+O_FILES = ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o ft_strcmp.o ft_atoi.o \
+ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_strstr.o
 
 all: $(NAME)
 
