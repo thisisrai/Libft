@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 11:20:23 by ralee             #+#    #+#             */
-/*   Updated: 2017/11/29 17:34:30 by ralee            ###   ########.fr       */
+/*   Updated: 2017/11/30 13:36:47 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,5 @@ char	*ft_strstr(char *big, char *little)
 		big++;
 	}
 	printf("%s ==== placeholder\n", placeholder);
-	if (little_index == counter)
-		return (placeholder);
-	return (0);
+	return (little_index == counter ? placeholder : 0);
 }
