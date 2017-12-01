@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/30 12:46:49 by ralee             #+#    #+#             */
-/*   Updated: 2017/11/30 16:43:57 by ralee            ###   ########.fr       */
+/*   Created: 2017/11/30 16:24:42 by ralee             #+#    #+#             */
+/*   Updated: 2017/11/30 16:46:07 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "../include/libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	counter;
-	char	*str;
-
-	counter = 0;
-	str = (char*)b;
-	if (!str)
-		return (0);
-	while (counter < len)
+	if (c == 0)
 	{
-		str[counter] = (char)c;
-		counter++;
+		return ((char*)(s + (ft_strlen((char*)s))));
 	}
-	return (b);
+	while (*s && *s != '\0')
+	{
+		if (*s == c)
+			return ((char*)s);
+		s++;
+	}
+	return (0);
 }
