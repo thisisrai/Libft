@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 11:20:23 by ralee             #+#    #+#             */
-/*   Updated: 2017/11/30 13:36:47 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/01 18:18:58 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,25 @@ char	*ft_strstr(char *big, char *little)
 
 	counter = 0;
 	little_index = ft_strlen(little);
+	placeholder = big;
 	if (!*little)
 		return (big);
-	while (little[counter] != '\0' && *big != '\0')
+	while (little[counter] != '\0' && *placeholder != '\0')
 	{
-		if (little[counter] == *big)
+		if (little[counter] == *placeholder)
 		{
+			// printf("%s\n", placeholder);
 			if (counter == 0)
-				placeholder = big;
+				big = placeholder;
 			counter++;
+			if (counter == little_index)
+				return (big);
 		}
 		else
 		{
 			counter = 0;
 		}
-		big++;
+		placeholder++;
 	}
-	printf("%s ==== placeholder\n", placeholder);
-	return (little_index == counter ? placeholder : 0);
+	return (0);
 }
