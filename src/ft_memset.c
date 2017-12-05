@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 12:46:49 by ralee             #+#    #+#             */
-/*   Updated: 2017/11/30 16:43:57 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/05 12:20:07 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	counter = 0;
 	str = (char*)b;
-	if (!str)
-		return (0);
 	while (counter < len)
 	{
 		str[counter] = (char)c;
