@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 11:07:10 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/04 11:50:08 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/05 12:29:55 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ const void *restrict src, int c, size_t n)
 	srce = (unsigned char*)src;
 	c2 = (unsigned char)c;
 	counter = 0;
-	while (*srce != '\0' && counter < n && *srce != c2)
+	while (counter < n && *srce != c2)
 	{
 		*dest = *srce;
 		dest++;
