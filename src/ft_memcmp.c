@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 11:53:04 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/04 13:34:58 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/04 13:40:14 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,4 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 		stopper++;
 	}
 	return (converted_s1[stopper] - converted_s2[stopper]);
-}	
+}
