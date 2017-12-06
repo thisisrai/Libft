@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/27 14:46:51 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/06 12:17:03 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/06 11:26:53 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/06 12:51:59 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <string.h>
+#include <string.h>
+#include "../include/libft.h"
 
-int		ft_atoi(char *str);
-void	ft_bzero(void *s, size_t n);
-int		ft_strlen(char *str);
-char	*ft_strdup(char *src);
-int		ft_isdigit(int c);
-int		ft_isalpha(int c);
-char	*ft_strcpy(char *dest, char *src);
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	size_t	counter;
+	char	*dest;
+	char	*source;
 
-#endif
+	counter = 0;
+	dest = (char*)dst;
+	source = (char*)src;
+	if (dest < source)
+	{
+		while (counter < len)
+		{
+			dest[counter] = source[counter];
+			counter++;
+		}
+	}
+	else
+	{
+		while (len--)
+		{
+			dest[len] = source[len];
+		}
+	}
+	return (dst);
+}
