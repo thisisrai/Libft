@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/29 17:18:56 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/05 16:24:31 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/05 14:59:20 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/05 16:23:56 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, int n)
-{
-	int		count;
+// #include <string.h>
 
-	count = 0;
-	while (s1[0] == s2[0] && s1[0] != '\0' && s2[0] != '\0' && count < n)
-	{
-		s1++;
-		s2++;
-		count++;
-	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
-}
+// size_t	strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+// {
+	
+// }
