@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/27 14:46:51 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/06 13:54:57 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/06 13:45:52 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/06 13:57:26 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <string.h>
-# include <stdlib.h>
+#include "../include/libft.h"
 
-int		ft_atoi(char *str);
-void	ft_bzero(void *s, size_t n);
-int		ft_strlen(char *str);
-char	*ft_strdup(char *src);
-int		ft_isdigit(int c);
-int		ft_isalpha(int c);
-char	*ft_strcpy(char *dest, char *src);
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-void	*ft_memset(void *b, int c, size_t len);
+void	*ft_memalloc(size_t size)
+{
+	void	*memoryslot;
 
-#endif
+	memoryslot = malloc(size);
+	if (!memoryslot)
+		return (0);
+	else
+		ft_memset(memoryslot, 0, size);
+	return (memoryslot);
+}
