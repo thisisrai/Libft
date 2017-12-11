@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 14:46:51 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/07 12:25:06 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/11 15:39:29 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);
