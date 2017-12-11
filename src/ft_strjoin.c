@@ -5,26 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/10 13:48:15 by ralee@stude       #+#    #+#             */
-/*   Updated: 2017/12/10 16:33:09 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/10 13:48:15 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/11 11:56:26 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
-#include <unistd.h>
 
-// void	setter(char const *s1, char **combostring, int	*comboindex)
-// {
-// 	int		size;
+void	setter(char const *s1, char **combostring, int *comboindex)
+{
+	int		size;
 
-// 	size = 0;
-// 	while (s1[size] != '\0')
-// 		{
-// 			*combostring[*comboindex] = s1[size];
-// 			(*comboindex)++;
-// 			size++;
-// 		}
-// }
+	size = 0;
+	while (s1[size] != '\0')
+	{
+		combostring[0][*comboindex] = s1[size];
+		(*comboindex)++;
+		size++;
+	}
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -39,23 +38,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		combostring = (char*)malloc(size - 1);
 	}
 	comboindex = 0;
-	size = 0;
 	if (combostring)
 	{
-		// setter(s1, &combostring, &comboindex);
-		while (s1[size] != '\0')
-		{
-			combostring[comboindex] = s1[size];
-			comboindex++;
-			size++;
-		}
-		size = 0;
-		while (s2[size] != '\0')
-		{
-			combostring[comboindex] = s2[size];
-			comboindex++;
-			size++;
-		}
+		setter(s1, &combostring, &comboindex);
+		setter(s2, &combostring, &comboindex);
 		combostring[comboindex] = '\0';
 	}
 	return (combostring);
