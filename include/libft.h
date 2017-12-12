@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 14:46:51 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/11 15:49:32 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/12 14:18:19 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	ft_memdel(void **ap);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
+void	ft_putchar_fd(char c, int fd);
 
 #endif
