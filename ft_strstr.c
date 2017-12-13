@@ -6,11 +6,11 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 11:20:23 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/10 13:50:03 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/12 15:22:38 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 void	looper(int *counter, char **placeholder, char **onebyone)
 {

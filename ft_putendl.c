@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/07 11:39:55 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/07 13:57:08 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/11 15:48:28 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:22:16 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+void	ft_putendl(char const *s)
 {
-	char	*returnstr;
-	char	*copy;
-	int		index;
-
-	index = 0;
-	copy = (char*)s;
-	returnstr = 0;
-	if (s && f)
+	if (s)
 	{
-		returnstr = (char*)malloc(ft_strlen((char*)s) + 1);
-		if (returnstr)
-		{
-			ft_strcpy(returnstr, copy);
-			while (returnstr[index] != '\0')
-			{
-				returnstr[index] = f(returnstr[index]);
-				index++;
-			}
-		}
+		ft_putstr(s);
+		ft_putchar('\n');
 	}
-	return (returnstr);
 }

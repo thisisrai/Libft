@@ -1,21 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 15:28:21 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/06 15:32:36 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/06 14:09:36 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:22:28 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-void	ft_strdel(char **as)
+char	*ft_strnew(size_t size)
 {
-	if (!as || !*as)
-		return ;
-	free(*as);
-	*as = NULL;
+	char	*str;
+	size_t	counter;
+
+	counter = 0;
+	str = malloc(size + 1);
+	if (str != 0)
+	{
+		while (counter < size)
+		{
+			str[counter] = '\0';
+			counter++;
+		}
+		str[counter] = '\0';
+		return (str);
+	}
+	else
+		return (0);
 }

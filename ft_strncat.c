@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 11:26:53 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/06 12:51:59 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/01 13:48:20 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:22:22 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "../include/libft.h"
+#include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strncat(char *restrict s1, char *restrict s2, size_t n)
 {
 	size_t	counter;
-	char	*dest;
-	char	*source;
+	char	*start;
+	char	*cpy;
 
 	counter = 0;
-	dest = (char*)dst;
-	source = (char*)src;
-	if (dest < source)
+	start = s1;
+	cpy = (char*)malloc(sizeof(char) * (ft_strlen(s2) + 1));
+	ft_strcpy(cpy, s2);
+	if (*s2 == '\0')
+		return (s1);
+	while (*s1 != '\0')
+		s1++;
+	while (*cpy != '\0' && counter < n)
 	{
-		while (counter < len)
-		{
-			dest[counter] = source[counter];
-			counter++;
-		}
+		s1[0] = cpy[0];
+		s1++;
+		cpy++;
+		counter++;
 	}
-	else
-	{
-		while (len--)
-		{
-			dest[len] = source[len];
-		}
-	}
-	return (dst);
+	s1[0] = '\0';
+	return (start);
 }

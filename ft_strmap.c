@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 10:38:31 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/01 13:46:47 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/07 11:39:55 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:22:06 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "../include/libft.h"
+#include "libft.h"
 
-char	*ft_strcat(char *restrict s1, char *restrict s2)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char	*start;
-	char	*cpy;
+	char	*returnstr;
+	char	*copy;
+	int		index;
 
-	start = s1;
-	cpy = (char*)malloc(sizeof(char) * (ft_strlen(s2) + 1));
-	ft_strcpy(cpy, s2);
-	if (*s2 == '\0')
-		return (s1);
-	while (*s1 != '\0')
-		s1++;
-	while (*cpy != '\0')
+	index = 0;
+	copy = (char*)s;
+	returnstr = 0;
+	if (s && f)
 	{
-		s1[0] = cpy[0];
-		s1++;
-		cpy++;
+		returnstr = (char*)malloc(ft_strlen((char*)s) + 1);
+		if (returnstr)
+		{
+			ft_strcpy(returnstr, copy);
+			while (returnstr[index] != '\0')
+			{
+				returnstr[index] = f(returnstr[index]);
+				index++;
+			}
+		}
 	}
-	s1[0] = '\0';
-	return (start);
+	return (returnstr);
 }

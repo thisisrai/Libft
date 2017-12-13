@@ -6,11 +6,11 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 12:38:33 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/05 14:57:30 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/12 15:22:32 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 #include <string.h>
 
 int		firstif(int *counter, char **placeholder, char **little, char **big)

@@ -6,11 +6,11 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 17:54:22 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/11 15:31:07 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/12 15:22:45 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 void	ifchecker(int *index, char const *s, int *end)
 {

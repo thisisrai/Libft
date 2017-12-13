@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 14:09:36 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/06 15:26:53 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/12 13:57:21 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:20:50 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-char	*ft_strnew(size_t size)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*str;
-	size_t	counter;
-
-	counter = 0;
-	str = malloc(size + 1);
-	if (str != 0)
-	{
-		while (counter < size)
-		{
-			str[counter] = '\0';
-			counter++;
-		}
-		str[counter] = '\0';
-		return (str);
-	}
-	else
-		return (0);
+	write(fd, &c, 1);
 }

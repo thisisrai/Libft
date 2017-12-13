@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/05 14:59:20 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/05 18:09:13 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/06 11:26:53 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:20:57 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "../include/libft.h"
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	counter;
-	size_t	end;
+	char	*dest;
+	char	*source;
 
 	counter = 0;
-	end = 0;
-	if (dstsize == 0)
-		return (counter);
-	while (dst[counter] && counter < dstsize)
-		counter++;
-	end = counter;
-	while (src[counter - end] && counter < dstsize - 1)
+	dest = (char*)dst;
+	source = (char*)src;
+	if (dest < source)
 	{
-		dst[counter] = src[counter - end];
-		counter++;
+		while (counter < len)
+		{
+			dest[counter] = source[counter];
+			counter++;
+		}
 	}
-	if (counter < dstsize)
-		dst[counter] = '\0';
-	return (end + ft_strlen(src));
+	else
+	{
+		while (len--)
+		{
+			dest[len] = source[len];
+		}
+	}
+	return (dst);
 }

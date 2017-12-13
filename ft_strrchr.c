@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/11 15:52:03 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/11 16:08:27 by ralee            ###   ########.fr       */
+/*   Created: 2017/11/30 16:24:42 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:22:35 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-void	ft_putnbr(int n)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (n == -2147483648)
+	char	*holder;
+
+	holder = 0;
+	if (c == 0)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		n = 147483648;
+		return ((char*)(s + (ft_strlen((char*)s))));
 	}
-	if (n < 0)
+	while (*s && *s != '\0')
 	{
-		ft_putchar('-');
-		n = -n;
+		if (*s == c)
+			holder = (char*)s;
+		s++;
 	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-		ft_putchar(n + '0');
+	return (holder);
 }

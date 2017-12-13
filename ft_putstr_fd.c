@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/07 14:25:58 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/10 13:50:10 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/12 14:16:46 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:21:11 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	char	*converteds;
-	char	*fresh_string;
-	size_t	index;
+	int		index;
 
-	fresh_string = (char*)malloc(len + 1);
-	converteds = (char*)s;
 	index = 0;
-	if (s && fresh_string)
+	if (s)
 	{
-		while (index < len)
+		while (s[index])
 		{
-			fresh_string[index] = converteds[start];
+			ft_putchar_fd(s[index], fd);
 			index++;
-			start++;
 		}
-		fresh_string[index] = '\0';
 	}
-	return (fresh_string);
 }

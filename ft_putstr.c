@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/11 15:48:28 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/11 15:51:17 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/11 15:44:53 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:21:48 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-void	ft_putendl(char const *s)
+void	ft_putstr(char const *s)
 {
+	int		index;
+
+	index = 0;
 	if (s)
 	{
-		ft_putstr(s);
-		ft_putchar('\n');
+		while (s[index])
+		{
+			ft_putchar(s[index]);
+			index++;
+		}
 	}
 }

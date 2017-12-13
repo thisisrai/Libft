@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/01 13:48:20 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/01 14:04:19 by ralee            ###   ########.fr       */
+/*   Created: 2017/12/05 14:59:20 by ralee             #+#    #+#             */
+/*   Updated: 2017/12/12 15:22:03 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include "../include/libft.h"
+#include "libft.h"
 
-char	*ft_strncat(char *restrict s1, char *restrict s2, size_t n)
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
 {
 	size_t	counter;
-	char	*start;
-	char	*cpy;
+	size_t	end;
 
 	counter = 0;
-	start = s1;
-	cpy = (char*)malloc(sizeof(char) * (ft_strlen(s2) + 1));
-	ft_strcpy(cpy, s2);
-	if (*s2 == '\0')
-		return (s1);
-	while (*s1 != '\0')
-		s1++;
-	while (*cpy != '\0' && counter < n)
+	end = 0;
+	if (dstsize == 0)
+		return (counter);
+	while (dst[counter] && counter < dstsize)
+		counter++;
+	end = counter;
+	while (src[counter - end] && counter < dstsize - 1)
 	{
-		s1[0] = cpy[0];
-		s1++;
-		cpy++;
+		dst[counter] = src[counter - end];
 		counter++;
 	}
-	s1[0] = '\0';
-	return (start);
+	if (counter < dstsize)
+		dst[counter] = '\0';
+	return (end + ft_strlen(src));
 }

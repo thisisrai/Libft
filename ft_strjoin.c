@@ -6,11 +6,11 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 13:48:15 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/11 11:56:26 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/12 15:21:58 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
 void	setter(char const *s1, char **combostring, int *comboindex)
 {
