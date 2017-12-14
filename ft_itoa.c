@@ -6,65 +6,46 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 17:16:51 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/13 17:06:55 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/13 17:21:18 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	is_negative(int *positive, int *copy)
+void	is_negative(int *positive, int *n)
 {
-	if (*copy < 0)
+	if (*n < 0)
 	{
 		*positive = 1;
-		*copy = -(*copy);
+		*n = -(*n);
 	}
 }
 
-// void	setter(int *n, int *digits, char **str)
-// {
-// 	str[0][*digits] = '\0';
-// 	while (*digits)
-// 	{
-// 		str[0][*digits] = *n % 10 + '0'
-// 		(*n) = (*n / 10);
-// 		(*digits)--;
-// 	}
-// }
-
 char	*ft_itoa(int n)
 {
-	int		copy;
+	int		tmpn;
+	int		len;
 	int		positive;
-	int		digits;
 	char	*str;
 
-	copy = n;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	tmpn = n;
+	len = 2;
 	positive = 0;
-	digits = 0;
-	is_negative(&positive, &copy);
-	while(copy >= 10)
+	is_negative(&positive, &n);
+	while (tmpn /= 10)
+		len++;
+	len += positive;
+	if ((str = (char*)malloc(sizeof(char) * len)) == NULL)
+		return (NULL);
+	str[--len] = '\0';
+	while (len--)
 	{
-		digits++;
-		copy = copy / 10;
+		str[len] = n % 10 + '0';
+		n = n / 10;
 	}
-	digits++;
-	digits = digits + 1 + positive;
-	str = (char*)malloc(digits);
-	if (str)
-	{
-		str[digits] = '\0';
-		digits--;
-		while (digits >= 0)
-		{
-			str[digits] = n % 10 + '0';
-			n = n / 10;
-			digits--;
-		}
-		if (positive == 1)
-		{
-			str[0] = '-';
-		}
-	}
+	if (positive)
+		str[0] = '-';
 	return (str);
 }
