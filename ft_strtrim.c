@@ -6,13 +6,13 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 17:54:22 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/12 15:22:45 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/14 18:11:28 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ifchecker(int *index, char const *s, int *end)
+static	void	ifchecker(int *index, char const *s, int *end)
 {
 	while (s[*index] != '\0')
 	{
@@ -24,7 +24,7 @@ void	ifchecker(int *index, char const *s, int *end)
 	}
 }
 
-void	strsetter(char **str, int *start, int *end, char const *s)
+static	void	strsetter(char **str, int *start, int *end, char const *s)
 {
 	int		index;
 
