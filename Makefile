@@ -6,13 +6,13 @@
 #    By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/27 15:09:51 by ralee             #+#    #+#              #
-#    Updated: 2017/12/14 14:42:59 by ralee            ###   ########.fr        #
+#    Updated: 2017/12/15 14:29:06 by ralee            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CHECKER = -Wall -Wextra -Werror
-INCLUDE_PATH = ./libft.h
+INCLUDE_PATH = libft.h
 OPTION = -c -I $(INCLUDE_PATH)
 SOURCE = *.c
 O_FILES = *.o
@@ -32,4 +32,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean
+.PHONY: all, clean, fclean, re
