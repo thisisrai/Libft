@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 14:46:51 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/14 16:24:08 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/14 16:26:47 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,15 @@ void	ft_strdel(char **as);
 char	*ft_strdup(char *src);
 int		ft_strequ(char const *s1, char const *s2);
 void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strjoin(char const *s1, char const *s2);
+size_t	ft_strlcat(char *dst, char *src, size_t dstsize);
+int		ft_strlen(char *str);
+char	*ft_strmap(char const *s, char (*f)(char));
 
 char	*ft_strnew(size_t size);
 char	*ft_strnstr(char *big, char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 
-int		ft_strlen(char *str);
 
 #endif

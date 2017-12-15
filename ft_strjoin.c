@@ -6,13 +6,13 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 13:48:15 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/12 15:21:58 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/14 16:25:57 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	setter(char const *s1, char **combostring, int *comboindex)
+static	void	setter(char const *s1, char **combostring, int *comboindex)
 {
 	int		size;
 
