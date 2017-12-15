@@ -6,11 +6,11 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 13:56:45 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/04 17:07:30 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/14 15:08:25 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

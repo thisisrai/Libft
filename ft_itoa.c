@@ -6,13 +6,13 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 17:16:51 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/13 17:21:18 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/14 15:10:05 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	is_negative(int *positive, int *n)
+static	void	is_negative(int *positive, int *n)
 {
 	if (*n < 0)
 	{
