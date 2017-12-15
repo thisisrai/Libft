@@ -6,14 +6,15 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 12:38:33 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/14 16:19:12 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/15 11:56:21 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-static	int		firstif(int *counter, char **placeholder, char **little, char **big)
+static int		firstif(int *counter,
+char **placeholder, char **little, char **big)
 {
 	if (*counter == 0)
 		*big = *placeholder;
@@ -24,14 +25,14 @@ static	int		firstif(int *counter, char **placeholder, char **little, char **big)
 		return (0);
 }
 
-static	void	looper2(int *counter, char **placeholder, char **onebyone)
+static void		looper2(int *counter, char **placeholder, char **onebyone)
 {
 	*counter = 0;
 	*placeholder = *onebyone;
 	(*onebyone)++;
 }
 
-char	*ft_strnstr(char *big, char *little, size_t len)
+char			*ft_strnstr(char *big, char *little, size_t len)
 {
 	char	*placeholder;
 	char	*onebyone;
