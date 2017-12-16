@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 14:21:24 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/16 15:34:46 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/16 15:39:12 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 		if (*s1 - *s2 == 0)
 			return (1);
 	}
-	return (-1);
+	return (0);
 }
 
 // int		main(void)
