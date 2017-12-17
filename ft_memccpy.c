@@ -6,36 +6,27 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/04 11:07:10 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/05 12:29:55 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/16 15:59:41 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memccpy(void *restrict dst,
-const void *restrict src, int c, size_t n)
+void		*ft_memccpy(void *dest, const void *src, int c, size_t size)
 {
-	unsigned char	*dest;
-	unsigned char	*srce;
-	unsigned char	c2;
 	size_t			counter;
+	unsigned char	*source;
+	unsigned char	*destination;
 
-	dest = (unsigned char*)dst;
-	srce = (unsigned char*)src;
-	c2 = (unsigned char)c;
 	counter = 0;
-	while (counter < n && *srce != c2)
+	source = (unsigned char *)src;
+	destination = (unsigned char *)dest;
+	while (counter < size)
 	{
-		*dest = *srce;
-		dest++;
-		srce++;
+		destination[counter] = source[counter];
+		if (source[counter] == (unsigned char)c)
+			return (destination + counter + 1);
 		counter++;
-	}
-	if (*srce == c2)
-	{
-		*dest = *srce;
-		dest++;
-		return (dest);
 	}
 	return (0);
 }
