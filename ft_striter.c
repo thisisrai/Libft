@@ -6,17 +6,15 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 15:44:42 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/16 20:22:37 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/17 00:00:39 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if(!s || !f)
-		return;
-	else if(s)
+	if(s && f)
 	{
-		while (*s)
+		while (*s && s != 0)
 		{
 			f(s);
 			s++;

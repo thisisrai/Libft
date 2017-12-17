@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 13:48:15 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/15 11:57:06 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/17 00:10:57 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	int		comboindex;
 
 	combostring = 0;
+	if (s1 == 0 || s2 == 0)
+		return (0);
 	if (s1 && s2)
 	{
 		size = ft_strlen((char*)s1) + ft_strlen((char*)s2);
@@ -43,6 +45,7 @@ char			*ft_strjoin(char const *s1, char const *s2)
 		setter(s1, &combostring, &comboindex);
 		setter(s2, &combostring, &comboindex);
 		combostring[comboindex] = '\0';
+		return (combostring);
 	}
-	return (combostring);
+	return (0);
 }
