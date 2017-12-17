@@ -6,14 +6,14 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 12:38:33 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/15 11:56:21 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/17 12:05:28 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 
-static int		firstif(int *counter,
+static int		firstif(size_t *counter,
 char **placeholder, char **little, char **big)
 {
 	if (*counter == 0)
@@ -25,7 +25,7 @@ char **placeholder, char **little, char **big)
 		return (0);
 }
 
-static void		looper2(int *counter, char **placeholder, char **onebyone)
+static void		looper2(size_t *counter, char **placeholder, char **onebyone)
 {
 	*counter = 0;
 	*placeholder = *onebyone;
@@ -36,7 +36,7 @@ char			*ft_strnstr(char *big, char *little, size_t len)
 {
 	char	*placeholder;
 	char	*onebyone;
-	int		counter;
+	size_t		counter;
 	size_t	lessorequallen;
 
 	lessorequallen = 0;
