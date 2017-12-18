@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 11:20:23 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/17 12:05:54 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 11:27:06 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char			*ft_strstr(char *big, char *little)
 {
 	char	*placeholder;
 	char	*onebyone;
-	size_t		counter;
+	size_t	counter;
 
 	counter = 0;
 	placeholder = big;
