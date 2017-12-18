@@ -6,13 +6,14 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 11:20:23 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/18 14:05:18 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 14:21:01 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		looper(size_t *counter, const char **placeholder, const char **onebyone)
+static void		looper(size_t *counter,
+const char **placeholder, const char **onebyone)
 {
 	*counter = 0;
 	*placeholder = *onebyone;
@@ -23,7 +24,7 @@ char			*ft_strstr(const char *big, const char *little)
 {
 	const char	*placeholder;
 	const char	*onebyone;
-	size_t	counter;
+	size_t		counter;
 
 	counter = 0;
 	placeholder = big;

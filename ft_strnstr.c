@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 12:38:33 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/18 14:08:21 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 14:21:35 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ const char **placeholder, const char **little, const char **big)
 		return (0);
 }
 
-static void		looper2(size_t *counter, const char **placeholder, const char **onebyone)
+static void		looper2(size_t *counter,
+const char **placeholder, const char **onebyone)
 {
 	*counter = 0;
 	*placeholder = *onebyone;
