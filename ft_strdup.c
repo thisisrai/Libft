@@ -6,13 +6,13 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 18:43:57 by ralee             #+#    #+#             */
-/*   Updated: 2017/11/27 19:10:11 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 13:50:19 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	int		index;

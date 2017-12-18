@@ -6,13 +6,13 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 14:59:20 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/12 15:22:03 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 13:59:00 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	counter;
 	size_t	end;

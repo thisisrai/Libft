@@ -6,11 +6,11 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 17:18:56 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/18 11:31:59 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 14:09:23 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(char *s1, char *s2, int n)
+int		ft_strncmp(const char *s1, const char *s2, int n)
 {
 	int		count;
 

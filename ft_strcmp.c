@@ -6,11 +6,11 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 11:14:29 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/05 18:08:54 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 14:09:33 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+int		ft_strcmp(const char *s1, const char *s2)
 {
 	while (s1[0] == s2[0] && s1[0] != '\0' && s2[0] != '\0')
 	{

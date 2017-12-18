@@ -6,11 +6,11 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 14:19:23 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/05 12:24:13 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 14:10:33 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int			start;
 	long long	number;

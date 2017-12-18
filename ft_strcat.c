@@ -6,13 +6,13 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 10:38:31 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/12 15:21:30 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 13:56:11 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *restrict s1, char *restrict s2)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	char	*start;
 	char	*cpy;
