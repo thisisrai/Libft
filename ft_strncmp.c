@@ -6,13 +6,15 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 17:18:56 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/18 14:09:23 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 14:17:24 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strncmp(const char *s1, const char *s2, int n)
+#include "libft.h"
+
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int		count;
+	size_t	count;
 
 	count = 0;
 	while ((*s1 || *s2) && count < n)
