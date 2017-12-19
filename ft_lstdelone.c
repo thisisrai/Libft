@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 17:34:46 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/18 18:05:45 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/19 09:45:19 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
 	if (!alst || !*alst)
-		return;
+		return ;
 	if (del != NULL)
 		del((*alst)->content, (*alst)->content_size);
 	free(*alst);
