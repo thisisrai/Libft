@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 14:29:23 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/18 15:25:18 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/18 17:17:09 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		(*list).content = content;
+		(*list).content = malloc(sizeof(content));
+		if (!(*list).content)
+			return (NULL);
+		(*list).content = ft_memcpy((*list).content, content, content_size);
 		(*list).content_size = content_size;
 	}
 	(*list).next = NULL;
