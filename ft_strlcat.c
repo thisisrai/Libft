@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/05 14:59:20 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/19 14:58:57 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/20 11:52:45 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	counter = 0;
 	end = 0;
-	if (dstsize == 0)
-		return (counter);
 	while (dst[counter] && counter < dstsize)
 		counter++;
 	end = counter;
