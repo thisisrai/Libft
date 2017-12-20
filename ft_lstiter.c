@@ -6,7 +6,7 @@
 /*   By: ralee <ralee@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 10:29:57 by ralee             #+#    #+#             */
-/*   Updated: 2017/12/19 10:50:06 by ralee            ###   ########.fr       */
+/*   Updated: 2017/12/20 15:42:23 by ralee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
+	if (!lst || !f)
+		return ;
 	while (lst)
 	{
 		f(lst);
